@@ -1,0 +1,12 @@
+name = Language switcher dropdown
+package = Multilanguage
+description = Provides a dropdown select to switch between available languages.
+dependencies[] = locale
+core = 7.x
+
+; Information added by drupal.org packaging script on 2011-10-06
+version = "7.x-1.0"
+core = "7.x"
+project = "lang_dropdown"
+datestamp = "1317906409"
+
