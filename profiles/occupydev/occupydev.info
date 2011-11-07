@@ -105,6 +105,7 @@ dependencies[] = debut_social
 ;dependencies[] = file_admin
 ;dependencies[] = jcarousel
 ;dependencies[] = media
+;dependencies[] = media_flickr
 ;dependencies[] = media_vimeo
 ;dependencies[] = media_youtube
 ;dependencies[] = mediawikiauth
