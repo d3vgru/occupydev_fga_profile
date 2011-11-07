@@ -57,7 +57,6 @@ dependencies[] = i18n
 ;dependencies[] = ideation
 dependencies[] = image_captcha
 ;dependencies[] = jcarousel
-dependencies[] = jquery_update
 dependencies[] = job_scheduler
 dependencies[] = lang_dropdown
 ;dependencies[] = ldap
