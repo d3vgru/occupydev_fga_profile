@@ -60,6 +60,7 @@ dependencies[] = image_captcha
 dependencies[] = job_scheduler
 dependencies[] = lang_dropdown
 ;dependencies[] = ldap
+dependencies[] = libraries
 dependencies[] = link
 dependencies[] = logintoboggan
 ;dependencies[] = media
