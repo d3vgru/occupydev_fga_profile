@@ -1,0 +1,74 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Enables real-time views feeds using PubSubHubbub.
+ */
+
+
+/**
+ * Implements hook_views_api().
+ */
+function pusher_views_feed_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'pusher_views_feed'),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function pusher_views_feed_ctools_plugin_api($module, $api) {
+  if ($module == "pusher_views_feed") {
+    switch ($api) {
+      case 'pusher_views_feed':
+        return array('version' => 1);
+    }
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function pusher_views_feed_node_insert($node) {
+  if (TRUE || TRUE) {
+    if ($node->status && $node->promote) {
+      // Execute view in order to check if node in view result.
+      $view = views_get_view('asdf');
+      $view->execute_display('feed_1');
+
+      foreach($view->result as $result) {
+        if($result->nid == $node->nid) {
+          // Push if node in views result.
+          pusher_notify(array($node->nid));
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_node_update().
+ */
+function pusher_views_feed_node_update($node) {
+  pusher_views_feed_node_insert($node);
+}
+
+/**
+ * Implements hook_views_plugins_alter().
+ */
+function pusher_views_feed_views_plugins_alter(&$plugins) {
+  /*// Attach contextual links to each display plugin. The links will point to
+  // paths underneath "admin/structure/views/view/{$view->name}" (i.e., paths
+  // for editing and performing other contextual actions on the view).
+  foreach ($plugins['display'] as &$display) {
+    $display['contextual links']['views_ui'] = array(
+      'parent path' => 'admin/structure/views/view',
+      'argument properties' => array('name'),
+    );
+  }*/
+  //dpm($plugins);
+}

@@ -1,0 +1,6 @@
+name = "Pusher Node"
+description = "Enables pushing nodes via real-time feeds using PubSubHubbub."
+package = PubSubHubbub
+core = 7.x
+dependencies[] = pusher
+files[] = pusher_node.module

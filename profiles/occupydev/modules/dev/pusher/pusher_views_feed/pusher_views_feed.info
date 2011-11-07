@@ -1,0 +1,10 @@
+; $Id$
+name = Pusher Views Feed
+description = Enables views driven real-time feeds using PubSubHubbub.
+package = PubSubHubbub
+core = 7.x
+dependencies[] = views
+dependencies[] = pusher
+files[] = pusher_views_feed.module
+files[] = pusher_views_feed.views.inc
+files[] = pusher_views_feed_views_plugin_style_rss.inc

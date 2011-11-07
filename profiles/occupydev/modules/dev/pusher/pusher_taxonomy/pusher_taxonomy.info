@@ -1,0 +1,8 @@
+; $Id$
+name = Pusher Taxonomy
+description = Enables categorized real-time feeds using PubSubHubbub.
+package = PubSubHubbub
+core = 7.x
+dependencies[] = taxonomy
+dependencies[] = pusher
+files[] = pusher_taxonomy.module

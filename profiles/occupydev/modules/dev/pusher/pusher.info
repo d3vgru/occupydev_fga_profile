@@ -1,0 +1,6 @@
+name = "Pusher"
+description = "API infrastructure for pushing content via real-time feeds using PubSubHubbub."
+package = PubSubHubbub
+dependencies[] = push_hub
+core = 7.x
+files[] = pusher.module
